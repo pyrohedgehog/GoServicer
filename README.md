@@ -79,6 +79,13 @@ I want to plan things out to get a realistic proof of concept out, before decidi
         - Having more than one demo will be useful, and I want to see what will be used where, and how can i remove repeated elements as much as possible
 - [ ] naming conventions
     - While first I want concepts written out as clearly as I can, there will be a point where setting up naming conventions will be important. Until this point, nothing is set in stone.
+- [ ] Nucleus node
+    - I've been thinking about this more, and i want each grouping to be able to act like a cell. Have its own specialization, but also be able to communicate externally, and internally with queues. At first, i was thinking of this more like a docker container being a single service, but the placement of queues got tricky. The other thing is, devops keeps me up at night. The idea of drag and drop configuration of queues (like with Nifi) has kept me up a lot this week, I want to have code (or at least, configs) control everything. To this extent, i think a central point per clustering with help.
+    - Job:
+     Like how a cell's nucleus handles the reading of DNA, and is a central point of command (ish, enough for this metaphor), the nucleus will be a host setup point, and we can refer to the grouping of services as being a cell.
+        - [ ] internal connection configurations in a simple manner.
+        - [ ] support for external connections and their configurations
+        - [ ] plan out long term designs around controlling the whole cell through predefined calls. EG, to have an entire ecosystem spun up at once, ideally with a single config.
 - ### decide where this stands.
     - This is the point where anything after, is purely if this seems to have any grounding. If not, I would like to publish this anyways. There is plenty to learn in failings, same as with success, and I should be less greedy with that knowledge.
     - The main thing here is, I want to have an idea what I'm working towards, and what will satisfy that. We'll see if I change the order as things go on.
